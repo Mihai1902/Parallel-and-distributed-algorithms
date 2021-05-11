@@ -1,4 +1,4 @@
-package com.ace.ucv;
+package com.ace.ucv.service;
 
 public class QuickSort {
 

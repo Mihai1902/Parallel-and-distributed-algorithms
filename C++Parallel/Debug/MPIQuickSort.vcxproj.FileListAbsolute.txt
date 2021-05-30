@@ -1,0 +1,2 @@
+C:\Users\Mihai\source\repos\MPIQuickSort\Debug\MPIQuickSort.exe
+C:\Users\Mihai\source\repos\MPIQuickSort\Debug\MPIQuickSort.pdb

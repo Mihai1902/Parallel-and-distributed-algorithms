@@ -1,0 +1,2 @@
+C:\Users\Mihai\source\repos\QuickSortC\Debug\QuickSortC.exe
+C:\Users\Mihai\source\repos\QuickSortC\Debug\QuickSortC.pdb

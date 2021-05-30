@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <string>
 #include <fstream>
+#include <chrono>
 
-#define SIZE 1024
+#define SIZE 10000000
 
 using namespace std;
 
@@ -55,8 +56,6 @@ void quickSort(int* array, int low, int high)
 }
 
 int main() {
-	clock_t start;
-	clock_t finish;
 
 	ifstream fin("input.txt");
 	ofstream fout("output.txt");
@@ -64,11 +63,11 @@ int main() {
 	int* arr = (int*)malloc(SIZE * sizeof(int));
 	int arraySize = read_file(fin, arr);
 
-	start = clock();
+	auto start = std::chrono::high_resolution_clock::now();
 	quickSort(arr, 0, SIZE - 1);
-	finish = clock();
+	auto finish = std::chrono::high_resolution_clock::now();
 
-	cout << "Time: " << ((double)finish - (double)start) / CLOCKS_PER_SEC * 1000;
+	std::cout << double(std::chrono::duration_cast<std::chrono::milliseconds>(finish - start).count()) << std::endl;
 
 	write_file(fout, arraySize, arr);
 	free(arr);
